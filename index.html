@@ -1,58 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#e9eeeb">
-<meta name="description" content="Satyam Singh — computer science, AI systems, algorithms and engineering experiments.">
-<title>Satyam Singh — Engineer / In Progress</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Satyam Singh — computer science student building at the intersection of AI, systems, and software.">
+<title>Satyam Singh</title>
 <style>
-:root{--paper:#e9eeeb;--white:#fbfcfb;--ink:#101311;--muted:#626a65;--line:#cbd3ce;--green:#07862e;--gutter:clamp(16px,4.6vw,68px);--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;--sans:Arial,Helvetica,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--green);outline-offset:4px}.shell{width:calc(100% - 2 * var(--gutter));margin-inline:auto}.topbar{min-height:68px;display:grid;grid-template-columns:1.2fr 2fr 1fr;border-bottom:1px solid var(--line);align-items:stretch}.brand,.nav a,.availability{display:flex;align-items:center;padding:0 20px;border-right:1px solid var(--line)}.brand{font-weight:800;font-size:1.05rem;letter-spacing:-.06em}.brand span{color:var(--green)}.nav{display:flex}.nav a{flex:1;justify-content:center;font-size:.86rem}.nav a:hover{background:var(--white)}.availability{justify-content:flex-end;border-right:0;gap:9px;font:.72rem var(--mono);text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}
-.hero{display:grid;grid-template-columns:1fr 1.3fr 1fr;min-height:460px;border-bottom:1px solid var(--line)}.cell{padding:clamp(22px,3vw,42px);border-right:1px solid var(--line)}.cell:last-child{border-right:0}.label{font:700 .7rem var(--mono);text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}.main{display:flex;flex-direction:column;justify-content:space-between;background:var(--white)}h1{margin:34px 0 24px;font-size:clamp(3.5rem,9vw,8.8rem);line-height:.78;letter-spacing:-.095em;font-weight:800}h1 span{display:block}.intro{max-width:480px;font-size:clamp(1rem,1.4vw,1.25rem);line-height:1.45}.side{display:flex;flex-direction:column;justify-content:space-between}.number{font:clamp(4rem,9vw,8rem)/.9 var(--mono);letter-spacing:-.12em}.side p{max-width:220px;color:var(--muted);font-size:.9rem;line-height:1.5}.pills{display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid var(--line);padding:8px 10px;font:.7rem var(--mono);text-transform:uppercase}.pill:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.marquee{overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--line)}.track{display:flex;align-items:center;gap:clamp(24px,4vw,60px);width:max-content;padding:14px 0;font:700 .72rem var(--mono);letter-spacing:.08em}.track span:before{content:"✳";color:var(--green);margin-right:14px}
-section{scroll-margin-top:20px}.heading{display:grid;grid-template-columns:1fr 2fr 1fr;min-height:130px;border-bottom:1px solid var(--line)}.heading>div{padding:25px;border-right:1px solid var(--line)}.heading>div:last-child{border-right:0}h2{margin:5px 0 0;font-size:clamp(2rem,4vw,4.1rem);line-height:.95;letter-spacing:-.075em}.note{align-self:end;color:var(--muted);font-size:.85rem;line-height:1.45}
-.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.project{min-height:310px;display:flex;flex-direction:column;padding:clamp(20px,3vw,38px);border-bottom:1px solid var(--line);border-right:1px solid var(--line);transition:background .18s}.project:nth-child(2n){border-right:0}.project:hover{background:var(--white)}.ptop{display:flex;justify-content:space-between;gap:12px;font:.7rem var(--mono);text-transform:uppercase;color:var(--muted)}.pno{color:var(--green)}.project h3{margin:38px 0 12px;font-size:clamp(1.7rem,3vw,3rem);line-height:.95;letter-spacing:-.065em}.project p{max-width:510px;color:var(--muted);line-height:1.5;font-size:.93rem}.pbottom{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-top:auto;padding-top:24px}.tech{display:flex;flex-wrap:wrap;gap:6px}.tech span{font:.65rem var(--mono);border:1px solid var(--line);padding:5px 7px}.arrow{font-size:1.5rem;transition:transform .18s}.project:hover .arrow{transform:translate(3px,-3px)}
-.about{display:grid;grid-template-columns:1fr 2fr 1fr;border-bottom:1px solid var(--line)}.about>div{padding:clamp(20px,3vw,38px);border-right:1px solid var(--line)}.about>div:last-child{border-right:0}.copy{background:var(--white);font-size:clamp(1.15rem,2vw,1.7rem);line-height:1.35;letter-spacing:-.035em}.copy p{margin:0 0 18px}.copy p:last-child{margin-bottom:0}.focus{list-style:none;margin:18px 0 0;padding:0}.focus li{padding:10px 0;border-bottom:1px solid var(--line);font-size:.84rem}.focus li:before{content:"+ ";color:var(--green);font-family:var(--mono)}
-.contact{display:grid;grid-template-columns:1fr 2fr;border-bottom:1px solid var(--line)}.contact>div{padding:clamp(22px,4vw,50px);border-right:1px solid var(--line)}.contact>div:last-child{border-right:0;background:var(--white)}.contact h2{font-size:clamp(2.6rem,6.5vw,7rem)}.contact p{color:var(--muted);max-width:520px;line-height:1.5}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.cta{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;background:var(--green);color:white;padding:14px 16px;min-width:190px;font-weight:700}.cta:hover{background:#056b25}.giant{font-size:clamp(3.4rem,15vw,15rem);line-height:.82;letter-spacing:-.105em;font-weight:900;white-space:nowrap;overflow:hidden;padding:24px 0 18px;border-bottom:1px solid var(--line)}.giant span{color:var(--green)}footer{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:64px;align-items:stretch}footer div{display:flex;align-items:center;padding:15px 20px;border-right:1px solid var(--line);font:.68rem var(--mono);color:var(--muted)}footer div:last-child{border-right:0;justify-content:flex-end}.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:760px){.topbar{grid-template-columns:1fr auto}.brand{min-height:58px}.nav{grid-column:1/-1;grid-row:2;border-top:1px solid var(--line);min-height:48px}.nav a{padding:0 8px}.availability{grid-column:2;grid-row:1;padding:0 12px}.hero{grid-template-columns:1fr 1fr}.main{grid-column:1/-1;grid-row:1;min-height:390px;border-bottom:1px solid var(--line)}.heading{grid-template-columns:1fr 2fr}.heading>div:last-child{display:none}.projects{grid-template-columns:1fr}.project,.project:nth-child(2n){border-right:0}.project{min-height:270px}.about{grid-template-columns:1fr 1fr}.about>div:nth-child(2){grid-column:1/-1;grid-row:1;border-right:0;border-bottom:1px solid var(--line)}.about>div:nth-child(3){border-right:0}.contact{grid-template-columns:1fr}.contact>div{border-right:0;border-bottom:1px solid var(--line)}footer{grid-template-columns:1fr 1fr}footer div:nth-child(2){display:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{transition-duration:.01ms!important}}
+:root{--bg:#fff;--fg:#202124;--muted:#6b7280;--line:#e5e7eb;--soft:#f5f5f5;--link:#185abc;--max:900px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}.container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+header{padding:64px 0 36px}.hero{display:grid;grid-template-columns:155px 1fr;gap:30px;align-items:center}.avatar{width:150px;height:150px;border-radius:50%;background:#ececec;display:grid;place-items:center;color:#555;font-size:42px;font-weight:600;letter-spacing:-3px;border:1px solid var(--line)}
+h1{font-size:36px;letter-spacing:-1.5px;line-height:1.15;margin:0 0 10px;font-weight:700}h2{font-size:19px;line-height:1.5;font-weight:400;margin:0 0 18px;color:#444}.social{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}.social a{font-weight:600}.intro{margin:26px 0 0;max-width:760px;color:#444}hr{border:0;border-top:1px solid var(--line);margin:0}
+section{padding:30px 0}.section-title{font-size:13px;text-transform:uppercase;letter-spacing:1.8px;color:var(--muted);font-weight:700;margin:0 0 20px}.entry{display:grid;grid-template-columns:125px 1fr;gap:22px;padding:0 0 27px;margin-bottom:22px;border-bottom:1px solid #eee}.entry:last-child{border-bottom:0;margin-bottom:0}.date{font-size:14px;color:var(--muted);padding-top:2px}.entry h3{font-size:18px;line-height:1.35;margin:0 0 7px}.entry p{margin:0;color:#444}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.tag{font-size:12px;border:1px solid #dedede;border-radius:4px;padding:2px 8px;color:#555}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.project{border:1px solid var(--line);border-radius:8px;padding:18px;background:#fff}.project h3{font-size:17px;margin:0 0 7px}.project p{margin:0;color:#4b5563;font-size:14px}.project .links{margin-top:12px;font-size:14px}.project .links a{margin-right:12px}
+.note{background:var(--soft);border-radius:8px;padding:18px 20px;color:#444}.skills{display:grid;grid-template-columns:130px 1fr;gap:12px 20px}.skills strong{font-size:14px}.skills span{color:#4b5563}
+footer{border-top:1px solid var(--line);padding:24px 0 42px;color:var(--muted);font-size:13px;margin-top:18px}
+@media(max-width:620px){header{padding-top:36px}.hero{grid-template-columns:1fr;gap:18px}.avatar{width:108px;height:108px;font-size:32px}h1{font-size:31px}.entry{grid-template-columns:1fr;gap:4px;padding-bottom:22px;margin-bottom:20px}.projects{grid-template-columns:1fr}.skills{grid-template-columns:1fr;gap:3px}.skills span{margin-bottom:12px}.container{width:min(100% - 30px,var(--max))}}
 </style>
 </head>
 <body>
-<header class="shell topbar">
-  <a class="brand" href="#top">SATYAM<span>/</span>SS</a>
-  <nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-  <div class="availability"><i class="dot"></i> Building / learning</div>
-</header>
-<main id="top">
+<header class="container">
   <div class="hero">
-    <div class="cell side"><div class="label">Independent engineering portfolio<br>Edition 001 — 2026</div><div><div class="number">01<span style="color:var(--green)">.</span></div><p>Computer science, machine intelligence, and the systems that make ideas work.</p></div></div>
-    <div class="cell main"><div class="label">Hello, world. I'm Satyam Singh.</div><div><h1><span>THINK.</span><span>BUILD<span style="color:var(--green)">.</span></span></h1><p class="intro">I explore the space between <strong>algorithms, AI, and systems engineering</strong> — building projects to understand how things work beneath the surface.</p></div><div class="pills"><a class="pill" href="#work">Explore work ↘</a><a class="pill" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
-    <div class="cell side"><div class="label">Current interests</div><div><p>01 / Machine learning & computer vision</p><p>02 / C++, algorithms & systems</p><p>03 / Quantitative computing</p><p>04 / Tools for curious people</p></div><div class="label">Based in India · Open to ideas</div></div>
-  </div>
-  <div class="marquee" aria-hidden="true"><div class="track"><span>COMPUTE WITH INTENT</span><span>MAKE THE INVISIBLE VISIBLE</span><span>LEARN BY BUILDING</span><span>QUESTION THE ABSTRACTION</span><span>COMPUTE WITH INTENT</span><span>MAKE THE INVISIBLE VISIBLE</span></div></div>
-  <section id="work">
-    <div class="heading"><div><div class="label">01 / Selected work</div><div class="label" style="margin-top:18px">Projects & experiments</div></div><div><h2>Things made<br>to understand.</h2></div><div class="note">A growing collection of prototypes, explorations, and systems. Replace each project link with your actual repository.</div></div>
-    <div class="projects">
-      <article class="project reveal"><div class="ptop"><span class="pno">Project / 001</span><span>Computer vision</span></div><h3>Road Safety AI</h3><p>A video-analysis prototype exploring object detection, motion, and potential collision events in road scenes.</p><div class="pbottom"><div class="tech"><span>PYTHON</span><span>YOLOV8</span><span>OPENCV</span></div><a class="arrow" href="#" aria-label="Add Road Safety AI repository URL">↗</a></div></article>
-      <article class="project reveal"><div class="ptop"><span class="pno">Project / 002</span><span>Face recognition</span></div><h3>Eyeconic</h3><p>An attendance-system prototype using face detection, embeddings, and repeated recognition checks across a class session.</p><div class="pbottom"><div class="tech"><span>PYTHON</span><span>FACENET</span><span>RETINAFACE</span></div><a class="arrow" href="#" aria-label="Add Eyeconic repository URL">↗</a></div></article>
-      <article class="project reveal"><div class="ptop"><span class="pno">Project / 003</span><span>Learning tools</span></div><h3>Interactive AI Lab</h3><p>A platform concept for making neural networks and machine-learning computations tangible through hands-on visual experiments.</p><div class="pbottom"><div class="tech"><span>TYPESCRIPT</span><span>REACT</span><span>ML</span></div><a class="arrow" href="#" aria-label="Add Interactive AI Lab repository URL">↗</a></div></article>
-      <article class="project reveal"><div class="ptop"><span class="pno">Project / 004</span><span>Algorithms / systems</span></div><h3>Quant Experiments</h3><p>A workbench for algorithmic trading simulations, probability experiments, and performance-focused C++ explorations.</p><div class="pbottom"><div class="tech"><span>C++</span><span>STATISTICS</span><span>RESEARCH</span></div><a class="arrow" href="#" aria-label="Add Quant Experiments repository URL">↗</a></div></article>
+    <div class="avatar" aria-label="Satyam Singh initials">SS</div>
+    <div>
+      <h1>Satyam Singh</h1>
+      <h2>Computer Science student building at the intersection of AI, systems, and software.</h2>
+      <nav class="social" aria-label="Social links">
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="mailto:hello@example.com">Email ↗</a>
+      </nav>
     </div>
-  </section>
-  <section id="about">
-    <div class="heading"><div><div class="label">02 / About</div></div><div><h2>Curiosity is<br>a working method.</h2></div><div class="note">Less collecting buzzwords. More understanding the machinery.</div></div>
-    <div class="about"><div><div class="label">The short version</div></div><div class="copy"><p>I'm a Computer Science student interested in how intelligent software is built — from mathematical ideas and algorithms to the infrastructure that runs them.</p><p>This site is my public notebook: projects, experiments, and lessons learned along the way.</p></div><div><div class="label">Currently exploring</div><ul class="focus"><li>AI & machine learning</li><li>Algorithms and C++</li><li>Probability & statistics</li><li>Systems infrastructure</li></ul></div></div>
-  </section>
-  <section id="contact"><div class="contact"><div><div class="label">03 / Contact</div><div class="label" style="margin-top:18px">Ideas welcome</div></div><div><div class="label">Have something interesting to build?</div><h2>Let's make<br>it real<span style="color:var(--green)">.</span></h2><p>For thoughtful conversations, collaborations, or interesting engineering problems, find me here.</p><div class="actions"><a class="cta" href="mailto:YOUR_EMAIL@example.com">Email me <span>↗</span></a><a class="pill" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="pill" href="#" aria-label="Add your LinkedIn profile URL">LinkedIn ↗</a></div></div></div></section>
-  <div class="giant" aria-label="Satyam">SATYAM<span>;</span></div>
+  </div>
+  <p class="intro">I’m a B.Tech Computer Science student at VIT Bhopal interested in understanding how intelligent systems work—from computer vision and machine learning to the infrastructure that makes software reliable. I like building practical prototypes, learning by implementing things from scratch, and exploring the mathematics behind computing.</p>
+</header>
+<hr>
+<main>
+<section class="container" id="work">
+  <h2 class="section-title">Selected projects</h2>
+  <article class="entry">
+    <div class="date">Computer Vision</div>
+    <div><h3>Eyeconic — Attendance Logging System</h3><p>A prototype that uses face detection and facial embeddings to support classroom attendance logging. The design evaluates recognition across multiple time intervals rather than relying on a single frame, with privacy in mind by discarding raw images after processing.</p><div class="tags"><span class="tag">Python</span><span class="tag">FaceNet</span><span class="tag">RetinaFace</span><span class="tag">Computer Vision</span></div></div>
+  </article>
+  <article class="entry">
+    <div class="date">AI / Full stack</div>
+    <div><h3>Road Safety AI</h3><p>A video-analysis prototype that detects road events and surfaces alerts in a dashboard. The pipeline combines object detection and motion-based logic with a backend API and real-time alert delivery.</p><div class="tags"><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">Node.js</span><span class="tag">Next.js</span><span class="tag">Socket.IO</span></div></div>
+  </article>
+  <article class="entry">
+    <div class="date">Student platform</div>
+    <div><h3>BALLER — PYQ & Study Material</h3><p>A focused platform for finding and downloading previous-year questions and study material, with user authentication, browsing history, progress feedback, and a responsive interface.</p><div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Supabase</span></div></div>
+  </article>
+  <article class="entry">
+    <div class="date">Community</div>
+    <div><h3>VITSocial</h3><p>A student-focused social platform concept for connecting campus communities, clubs, alumni, and opportunities in one place.</p><div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span></div></div>
+  </article>
+</section>
+<div style="background:#f7f7f7">
+<section class="container" id="interests">
+  <h2 class="section-title">What I’m exploring</h2>
+  <div class="projects">
+    <article class="project"><h3>AI & machine learning</h3><p>Neural networks, computer vision, model training, and understanding ML systems through implementation.</p></article>
+    <article class="project"><h3>Systems & infrastructure</h3><p>Linux, networking, cloud deployment, performance, and the software layers behind reliable services.</p></article>
+    <article class="project"><h3>Algorithms & mathematics</h3><p>Data structures, probability, statistics, discrete mathematics, and problem-solving fundamentals.</p></article>
+    <article class="project"><h3>Quantitative computing</h3><p>Exploring the intersection of programming, probability, optimization, and market-oriented research.</p></article>
+  </div>
+</section>
+</div>
+<section class="container" id="toolbox">
+  <h2 class="section-title">Tools I’ve worked with</h2>
+  <div class="skills">
+    <strong>Languages</strong><span>Python, C++, JavaScript / TypeScript, SQL</span>
+    <strong>AI / Vision</strong><span>PyTorch ecosystem, YOLOv8, OpenCV, FaceNet, RetinaFace</span>
+    <strong>Web</strong><span>Next.js, React, Node.js, Express, Tailwind CSS</span>
+    <strong>Data / Auth</strong><span>Supabase, MongoDB, MySQL, Clerk</span>
+    <strong>Dev environment</strong><span>Git, Linux, Neovim, macOS, Docker and cloud fundamentals</span>
+  </div>
+</section>
+<section class="container" id="about">
+  <h2 class="section-title">A little about me</h2>
+  <p>I’m currently pursuing a B.Tech in Computer Science at VIT Bhopal University. I’m most motivated by work that goes beyond assembling interfaces: understanding the underlying systems, experimenting with ideas, and building things that are useful and technically interesting.</p>
+  <div class="note">This page is a lightweight, single-file portfolio: plain HTML and CSS, responsive on mobile, with no frameworks or external assets required. Replace the placeholder social links and initials avatar with your actual profile URLs and photograph before publishing.</div>
+</section>
 </main>
-<footer class="shell"><div>© <span id="year"></span> SATYAM SINGH</div><div>MADE WITH CURIOSITY / HTML + CSS</div><div>BACK TO TOP <a href="#top" style="margin-left:10px;color:var(--green)">↑</a></div></footer>
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
-const items=document.querySelectorAll(".reveal");
-if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});items.forEach(item=>observer.observe(item))}else{items.forEach(item=>item.classList.add("visible"))}
-</script>
+<footer><div class="container">© <span id="year">2026</span> Satyam Singh · Built with HTML & CSS.</div></footer>
 </body>
 </html>
